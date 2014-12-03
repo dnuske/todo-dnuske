@@ -1,0 +1,63 @@
+##############################################
+##                                          ## 
+##        TO-DO web tool development        ##
+##                                          ## 
+##############################################
+
+
+FEATURES
+
+
+TECH ASPECTS
+
+
+  REST API USSAGE
+  users
+   create
+    curl -i -X POST -H "Content-Type: application/json" -d '{"username":"test","password":"test"}' http://127.0.0.1:5000/api/users
+
+  	curl -u user:pass -i -X GET http://127.0.0.1:5000/api/token
+
+INSTALLATION
+
+# linux package dependences
+# python-dev
+
+ - create a new virtualenv
+    # sudo pip install virtualenvwrapper
+    # mkvirtualenv todo --no-site-packages
+ - activate virtualenv
+    # workon todo
+ - install requiremets
+    # pip install -r requirements.txt
+
+The server runs with $ python app.py
+and it's ok for test purposes but to deploy ready for high demand it is 
+recomended.
+
+To run the REST API app through a Gunicorn server and behind Nginx or similar.
+Also, serving the static directory throught Nginx only.
+It can be used a persistant cache server like Varnish after the Nginx to speed up 
+users page load speed and reduce bandwith consumption on the server.
+
+
+DEVELOPMENT
+
+css files are generated from Sass in scss format. 
+To compile run "compass compile static/css/compass-source" 
+or "compass watch static/css/compass-source" to listen to automated compilation 
+on scss sources changes.
+
+
+NOTES
+
+
+devops migrations based on:
+ - http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database
+
+
+
+
+
+
+

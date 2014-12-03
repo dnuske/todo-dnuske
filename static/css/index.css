@@ -1,0 +1,448 @@
+/* line 46, compass-source/scss/index.scss */
+body {
+  font-family: montserrat, sans-serif;
+  font-size: 28px;
+  padding: 0px;
+  margin: 0px;
+  background-image: url(/static/img/background-image.png);
+}
+
+/* line 54, compass-source/scss/index.scss */
+div {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 58, compass-source/scss/index.scss */
+td {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 62, compass-source/scss/index.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 65, compass-source/scss/index.scss */
+.visuallyhidden {
+  display: none;
+}
+
+/* line 71, compass-source/scss/index.scss */
+.box, .head-bar .header .login-box, .head-bar .header .loggedin-box, .body-bar .canvas .intro .register-box {
+  height: 46px;
+  line-height: 46px;
+  width: 200px;
+  border: solid 2px #00cc00;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  font-family: montserrat, sans-serif;
+}
+
+/* line 82, compass-source/scss/index.scss */
+.card, .task-card, .task-card-edit .main, .task-card-edit .relevance-selector1, .task-card-edit .relevance-selector2, .task-card-edit .relevance-selector3, .task-card-edit .relevance-selector4, .body-bar .canvas .intro .ticker .task-card--presentation {
+  user-select: none;
+  height: 120px;
+  width: 400px;
+  font-size: 20px;
+  border: solid 3px #999999;
+  background-color: #eeeeee;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 93, compass-source/scss/index.scss */
+.task-card, .task-card-edit .main, .task-card-edit .relevance-selector1, .task-card-edit .relevance-selector2, .task-card-edit .relevance-selector3, .task-card-edit .relevance-selector4, .body-bar .canvas .intro .ticker .task-card--presentation {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+/* line 101, compass-source/scss/index.scss */
+.task-card table, .task-card-edit .main table, .task-card-edit .relevance-selector1 table, .task-card-edit .relevance-selector2 table, .task-card-edit .relevance-selector3 table, .task-card-edit .relevance-selector4 table, .body-bar .canvas .intro .ticker .task-card--presentation table {
+  height: 100%;
+  width: 100%;
+}
+/* line 108, compass-source/scss/index.scss */
+.task-card .due, .task-card-edit .main .due, .task-card-edit .relevance-selector1 .due, .task-card-edit .relevance-selector2 .due, .task-card-edit .relevance-selector3 .due, .task-card-edit .relevance-selector4 .due, .body-bar .canvas .intro .ticker .task-card--presentation .due {
+  font-size: 12px;
+  font-family: montserrat, sans-serif;
+}
+/* line 112, compass-source/scss/index.scss */
+.task-card .due div, .task-card-edit .main .due div, .task-card-edit .relevance-selector1 .due div, .task-card-edit .relevance-selector2 .due div, .task-card-edit .relevance-selector3 .due div, .task-card-edit .relevance-selector4 .due div, .body-bar .canvas .intro .ticker .task-card--presentation .due div {
+  width: 100%;
+  font-size: 22px;
+  line-height: 22px;
+  height: 20px;
+}
+/* line 119, compass-source/scss/index.scss */
+.task-card .relevance, .task-card-edit .main .relevance, .task-card-edit .relevance-selector1 .relevance, .task-card-edit .relevance-selector2 .relevance, .task-card-edit .relevance-selector3 .relevance, .task-card-edit .relevance-selector4 .relevance, .body-bar .canvas .intro .ticker .task-card--presentation .relevance {
+  width: 60px;
+  background-color: white;
+  border-top: solid 1px #999999;
+}
+/* line 124, compass-source/scss/index.scss */
+.task-card .DO_OR_DIE, .task-card-edit .main .DO_OR_DIE, .task-card-edit .relevance-selector1 .DO_OR_DIE, .task-card-edit .relevance-selector2 .DO_OR_DIE, .task-card-edit .relevance-selector3 .DO_OR_DIE, .task-card-edit .relevance-selector4 .DO_OR_DIE, .body-bar .canvas .intro .ticker .task-card--presentation .DO_OR_DIE, .task-card .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .task-card .IMPORTANT, .task-card-edit .main .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .task-card-edit .main .IMPORTANT, .task-card-edit .relevance-selector1 .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector1 .IMPORTANT, .task-card-edit .relevance-selector2 .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector2 .IMPORTANT, .task-card-edit .relevance-selector3 .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector3 .IMPORTANT, .task-card-edit .relevance-selector4 .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector4 .IMPORTANT, .body-bar .canvas .intro .ticker .task-card--presentation .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .body-bar .canvas .intro .ticker .task-card--presentation .IMPORTANT, .task-card .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .task-card .BETTER_DONE, .task-card-edit .main .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .task-card-edit .main .BETTER_DONE, .task-card-edit .relevance-selector1 .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector1 .BETTER_DONE, .task-card-edit .relevance-selector2 .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector2 .BETTER_DONE, .task-card-edit .relevance-selector3 .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector3 .BETTER_DONE, .task-card-edit .relevance-selector4 .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector4 .BETTER_DONE, .body-bar .canvas .intro .ticker .task-card--presentation .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .body-bar .canvas .intro .ticker .task-card--presentation .BETTER_DONE, .task-card .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .task-card .MEH, .task-card-edit .main .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .task-card-edit .main .MEH, .task-card-edit .relevance-selector1 .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector1 .MEH, .task-card-edit .relevance-selector2 .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector2 .MEH, .task-card-edit .relevance-selector3 .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector3 .MEH, .task-card-edit .relevance-selector4 .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector4 .MEH, .body-bar .canvas .intro .ticker .task-card--presentation .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .body-bar .canvas .intro .ticker .task-card--presentation .MEH, .task-card .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .task-card .done, .task-card-edit .main .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .task-card-edit .main .done, .task-card-edit .relevance-selector1 .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector1 .done, .task-card-edit .relevance-selector2 .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector2 .done, .task-card-edit .relevance-selector3 .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector3 .done, .task-card-edit .relevance-selector4 .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .task-card-edit .relevance-selector4 .done, .body-bar .canvas .intro .ticker .task-card--presentation .head-bar .header .status-box .status-area .done, .head-bar .header .status-box .status-area .body-bar .canvas .intro .ticker .task-card--presentation .done {
+  background-color: red;
+}
+/* line 125, compass-source/scss/index.scss */
+.task-card .IMPORTANT, .task-card-edit .main .IMPORTANT, .task-card-edit .relevance-selector1 .IMPORTANT, .task-card-edit .relevance-selector2 .IMPORTANT, .task-card-edit .relevance-selector3 .IMPORTANT, .task-card-edit .relevance-selector4 .IMPORTANT, .body-bar .canvas .intro .ticker .task-card--presentation .IMPORTANT {
+  background-color: orange;
+}
+/* line 126, compass-source/scss/index.scss */
+.task-card .BETTER_DONE, .task-card-edit .main .BETTER_DONE, .task-card-edit .relevance-selector1 .BETTER_DONE, .task-card-edit .relevance-selector2 .BETTER_DONE, .task-card-edit .relevance-selector3 .BETTER_DONE, .task-card-edit .relevance-selector4 .BETTER_DONE, .body-bar .canvas .intro .ticker .task-card--presentation .BETTER_DONE {
+  background-color: yellow;
+}
+/* line 127, compass-source/scss/index.scss */
+.task-card .MEH, .task-card-edit .main .MEH, .task-card-edit .relevance-selector1 .MEH, .task-card-edit .relevance-selector2 .MEH, .task-card-edit .relevance-selector3 .MEH, .task-card-edit .relevance-selector4 .MEH, .body-bar .canvas .intro .ticker .task-card--presentation .MEH {
+  background-color: green;
+}
+/* line 128, compass-source/scss/index.scss */
+.task-card .done, .task-card-edit .main .done, .task-card-edit .relevance-selector1 .done, .task-card-edit .relevance-selector2 .done, .task-card-edit .relevance-selector3 .done, .task-card-edit .relevance-selector4 .done, .body-bar .canvas .intro .ticker .task-card--presentation .done {
+  background: url(/static/img/done-background.png) repeat #d3e6c8;
+}
+/* line 131, compass-source/scss/index.scss */
+.task-card .text, .task-card-edit .main .text, .task-card-edit .relevance-selector1 .text, .task-card-edit .relevance-selector2 .text, .task-card-edit .relevance-selector3 .text, .task-card-edit .relevance-selector4 .text, .body-bar .canvas .intro .ticker .task-card--presentation .text {
+  font-size: 18px;
+  border-left: solid 1px #999999;
+  font-family: swanky-and-moo-moo, sans-serif;
+  font-weight: normal;
+}
+
+/* line 138, compass-source/scss/index.scss */
+.task-card-edit {
+  height: auto;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  margin-left: -203px;
+  cursor: default;
+  z-index: 10000;
+}
+/* line 150, compass-source/scss/index.scss */
+.task-card-edit .main {
+  cursor: default;
+  margin-top: 10px;
+}
+/* line 155, compass-source/scss/index.scss */
+.task-card-edit .main textarea {
+  width: 90%;
+  height: 98%;
+}
+/* line 159, compass-source/scss/index.scss */
+.task-card-edit .main .due-up, .task-card-edit .main .due-down {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+/* line 166, compass-source/scss/index.scss */
+.task-card-edit .main .relevance {
+  cursor: pointer;
+}
+/* line 169, compass-source/scss/index.scss */
+.task-card-edit .main .button {
+  width: 80px;
+}
+/* line 174, compass-source/scss/index.scss */
+.task-card-edit .cancel {
+  margin-left: 326px;
+  margin-top: 0px;
+}
+/* line 179, compass-source/scss/index.scss */
+.task-card-edit .save {
+  margin-left: 326px;
+  margin-top: 10px;
+}
+/* line 184, compass-source/scss/index.scss */
+.task-card-edit .relevance-selector {
+  position: absolute;
+  margin-top: -40px;
+}
+/* line 189, compass-source/scss/index.scss */
+.task-card-edit .relevance-selector1, .task-card-edit .relevance-selector2, .task-card-edit .relevance-selector3, .task-card-edit .relevance-selector4 {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  margin-top: 20px;
+  background-color: red;
+}
+/* line 198, compass-source/scss/index.scss */
+.task-card-edit .relevance-selector1 .selector, .task-card-edit .relevance-selector2 .selector, .task-card-edit .relevance-selector3 .selector, .task-card-edit .relevance-selector4 .selector {
+  margin-left: -310px;
+  margin-top: 20%;
+  font-size: 24px;
+  width: 300px;
+  font-family: swanky-and-moo-moo, sans-serif;
+  font-weight: normal;
+  text-align: right;
+  background-color: transparent;
+}
+/* line 210, compass-source/scss/index.scss */
+.task-card-edit .relevance-selector2 {
+  margin-top: 100px;
+  background-color: orange;
+}
+/* line 217, compass-source/scss/index.scss */
+.task-card-edit .relevance-selector3 {
+  margin-top: 180px;
+  background-color: yellow;
+}
+/* line 223, compass-source/scss/index.scss */
+.task-card-edit .relevance-selector4 {
+  margin-top: 260px;
+  background-color: green;
+}
+
+/* line 235, compass-source/scss/index.scss */
+.head-bar .header {
+  height: 60px;
+  width: 100%;
+  background-color: #cccccc;
+  border-bottom: solid 3px #999999;
+  position: relative;
+}
+/* line 242, compass-source/scss/index.scss */
+.head-bar .header .status-box {
+  height: 42px;
+  width: 286px;
+  margin-left: 6px;
+  margin-top: 6px;
+  position: absolute;
+  left: 0px;
+  border: solid 3px white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-family: montserrat, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 42px;
+  cursor: pointer;
+}
+/* line 257, compass-source/scss/index.scss */
+.head-bar .header .status-box .title {
+  background-color: white;
+  text-align: center;
+  height: 42px;
+  line-height: 42px;
+  width: 100px;
+  float: left;
+}
+/* line 266, compass-source/scss/index.scss */
+.head-bar .header .status-box .status-area {
+  float: left;
+}
+/* line 271, compass-source/scss/index.scss */
+.head-bar .header .status-box .status-area .DO_OR_DIE, .head-bar .header .status-box .status-area .IMPORTANT, .head-bar .header .status-box .status-area .BETTER_DONE, .head-bar .header .status-box .status-area .MEH, .head-bar .header .status-box .status-area .done {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 28px;
+  float: left;
+  margin-left: 6px;
+  margin-top: 6px;
+  background-color: red;
+}
+/* line 283, compass-source/scss/index.scss */
+.head-bar .header .status-box .status-area .IMPORTANT {
+  background-color: orange;
+}
+/* line 287, compass-source/scss/index.scss */
+.head-bar .header .status-box .status-area .BETTER_DONE {
+  background-color: yellow;
+}
+/* line 291, compass-source/scss/index.scss */
+.head-bar .header .status-box .status-area .MEH {
+  background-color: green;
+}
+/* line 295, compass-source/scss/index.scss */
+.head-bar .header .status-box .status-area .done {
+  background: url(/static/img/done-background.png) repeat #d3e6c8;
+}
+/* line 302, compass-source/scss/index.scss */
+.head-bar .header .newcard-box {
+  height: 46px;
+  width: 160px;
+  margin-top: 6px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  border: solid 1px white;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-family: montserrat, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 44px;
+  cursor: pointer;
+}
+/* line 320, compass-source/scss/index.scss */
+.head-bar .header .login-box {
+  margin-top: 6px;
+  margin-right: 6px;
+  position: absolute;
+  border: solid 1px #00cc00;
+  right: 0px;
+}
+/* line 328, compass-source/scss/index.scss */
+.head-bar .header .loggedin-box {
+  margin-top: 6px;
+  margin-right: 6px;
+  position: absolute;
+  border: solid 1px white;
+  right: 0px;
+}
+/* line 339, compass-source/scss/index.scss */
+.head-bar .header.mode-loading .overlay {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  color: white;
+}
+/* line 352, compass-source/scss/index.scss */
+.head-bar .storage {
+  display: none;
+}
+
+/* line 357, compass-source/scss/index.scss */
+.body-bar .canvas {
+  overflow-x: hidden;
+}
+/* line 360, compass-source/scss/index.scss */
+.body-bar .canvas .intro {
+  margin: 0 auto;
+  position: relative;
+  width: 610px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: swanky-and-moo-moo, sans-serif;
+}
+/* line 369, compass-source/scss/index.scss */
+.body-bar .canvas .intro .ticker {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 372, compass-source/scss/index.scss */
+.body-bar .canvas .intro .ticker .task-card--presentation {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/* line 378, compass-source/scss/index.scss */
+.body-bar .canvas .intro .ticker .register-form, .body-bar .canvas .intro .ticker .login-form {
+  border: solid 6px #aaaaaa;
+  background-color: #eeeeee;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 310px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: montserrat, sans-serif;
+  font-size: 14px;
+}
+/* line 388, compass-source/scss/index.scss */
+.body-bar .canvas .intro .ticker .register-form .formname, .body-bar .canvas .intro .ticker .login-form .formname {
+  width: 130px;
+  text-align: right;
+  float: left;
+}
+/* line 398, compass-source/scss/index.scss */
+.body-bar .canvas .intro .register-box {
+  width: 300px;
+  height: 80px;
+  line-height: 78px;
+  vertical-align: middle;
+  font-size: 60px;
+  margin: 0 auto;
+  border: solid 4px #00cc00;
+}
+/* line 410, compass-source/scss/index.scss */
+.body-bar .canvas .sort-dropdown {
+  position: absolute;
+  top: 70px;
+  left: 15px;
+}
+/* line 416, compass-source/scss/index.scss */
+.body-bar .canvas .sort-dropdown .title {
+  display: inline;
+}
+/* line 419, compass-source/scss/index.scss */
+.body-bar .canvas .sort-dropdown .content {
+  display: inline;
+}
+/* line 426, compass-source/scss/index.scss */
+.body-bar .canvas.mode-loading .overlay {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  color: white;
+}
+/* line 439, compass-source/scss/index.scss */
+.body-bar .canvas.mode-edit .overlay {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  color: white;
+}
+/* line 452, compass-source/scss/index.scss */
+.body-bar .storage {
+  display: none;
+}
+
+/* line 457, compass-source/scss/index.scss */
+.foot-bar .footer {
+  margin-bottom: 150px;
+}
+/* line 461, compass-source/scss/index.scss */
+.foot-bar .storage {
+  display: none;
+}

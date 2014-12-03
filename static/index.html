@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Register</title>
+  <script src="//use.edgefonts.net/swanky-and-moo-moo:n4:all;montserrat.js"></script>
+  <script type="text/javascript" src="/static/js/lib/jquery-1.11.0.min.js" ></script>
+  <script type="text/javascript" src="/static/js/lib/underscore-1.5.2.min.js" ></script>
+  <script type="text/javascript" src="/static/js/lib/tweenmax-12.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css">
+</head>
+
+<body>
+  <div class="head-bar">
+
+    <div class="header mode-loading">
+      <div class="overlay mode-loading--move "></div>
+      <div class="login-box mode-loading--move mode-initial--move ">Login</div>
+    </div>
+
+    <div class="storage">
+
+      <!-- LOADING -->
+      <!--div class="overlay mode-loading--move"></div-->
+      <!--div class="login-box mode-loading--move mode-initial ">Login</div-->
+
+      <!-- INITIAL -->
+      <div class="status-box mode-loggedin--move">
+        <div class="title">status:</div>
+        <div class="status-area">
+          <div class="DO_OR_DIE" title="Do or die!">0</div>
+          <div class="IMPORTANT" title="Important tasks">0</div>
+          <div class="BETTER_DONE" title="Better get done">0</div>
+          <div class="MEH" title="Meh... maybe in your spare time">0</div>
+          <div class="done" title="Well done">0</div>
+        </div>
+      </div>
+      <div class="newcard-box mode-loggedin--move"> Add task </div>
+      <div class="loggedin-box mode-loggedin--move mode-edit--move ">Login</div>
+
+    </div>
+
+  </div>
+  <div class="body-bar">
+    <div class="canvas mode-loading">
+      <div class="overlay mode-loading--move"></div>
+
+      <div class="intro mode-loading--move mode-initial--move">
+        <div>your tasks have a life span</div>
+        <div class="ticker">
+          <div class="task-card--presentation">
+            <table title="Better do">
+              <tbody>
+                <tr>
+                  <td class="due">due <div>2</div> days</td>
+                  <td rowspan="2" class="text">this is a test text that takes 140 characters long. don't try to do different this is the real thing man, I swear and I never gonna let you.</td>
+                </tr>
+                <tr>
+                  <td class="relevance">&nbsp</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="register-form">
+            <div class="formname">username </div> <div class="forminput"><input type="text" name='user' maxlength="32" /></div>
+            <div class="formname">password </div> <div class="forminput"><input type="password" name='pass1' maxlength="20" /></div>
+            <div class="formname">repeat password </div> <div class="forminput"><input type="password" name='pass2' maxlength="20" /></div>
+            <div class="formname">&nbsp;</div> <div class="forminput"><input type="button" id="registerme" value='let me in!' /></div>
+          </div>
+          <div class="login-form">
+            <div class="formname">username </div> <div class="forminput"><input type="text" name='login-user' maxlength="32" /></div>
+            <div class="formname">password </div> <div class="forminput"><input type="password" name='login-pass' maxlength="20" /></div>
+            <div class="formname">&nbsp;</div> <div class="forminput"><input type="button" id="registerme" value='get me in' /></div>
+          </div>
+        </div>
+        <div>don't let them die!</div>
+        <div class="register-box">Join</div>
+      </div>
+    </div>
+    <div class="storage">
+
+      <div class="overlay mode-loading--move"></div>
+
+      <div class="overlay mode-edit--move"></div>
+
+      <div class="task-card-edit mode-edit--move">
+        <div class="cancel">
+          <input type="button" value="Cancel" name="cancel" class="button">
+        </div>
+        <div class="main">
+          <table >
+            <tbody>
+              <tr>
+                <td class="due" title="How many days to do the task?">
+                  <div class="due-up" name="due-up">&#x25B2;</div>
+                  <div name="due-days">1</div>
+                  <div class="due-down" name="due-down">&#x25BC;</div>
+                </td>
+                <td rowspan="2" class="text"><textarea maxlength="140" name="create-task-text"></textarea></td>
+              </tr>
+              <tr>
+                <td class="relevance DO_OR_DIE" title="How important the task is?">&nbsp</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="save">
+          <input type="button" value="Save" name="save" class="button">
+        </div>
+        <div class="relevance-selector">
+          <div class="relevance-selector1 DO_OR_DIE" name="relevance">
+            <div class="relevance-selector1-text selector" >
+              DO OR DIE
+            </div>
+          </div>
+          <div class="relevance-selector2 IMPORTANT" name="relevance">
+            <div class="relevance-selector2-text selector">
+              IMPORTANT
+            </div>
+          </div>
+          <div class="relevance-selector3 BETTER_DONE" name="relevance">
+            <div class="relevance-selector3-text selector">
+              BETTER DONE
+            </div>
+          </div>
+          <div class="relevance-selector4  MEH" name="relevance">
+            <div class="relevance-selector4-text selector">
+              MEH
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mode-loggedin task-card--replicate task-card">
+        <table title="">
+          <tbody>
+            <tr>
+              <td class="due">due <div></div> days</td>
+              <td rowspan="2" class="text"></td>
+            </tr>
+            <tr>
+              <td class="relevance">&nbsp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mode-loggedin--move sort-dropdown">
+        <div class="title">sorting:</div>
+        <div class="content">
+          <select class="sort-dropdown--select" name="sort-options">
+            <option value="none"> -- </option>
+            <option value="DUE">due date</option>
+            <option value="PRIORITY">priority</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="foot-bar">
+    <div class="footer">
+    </div>
+    <div class="storage">
+    </div>
+  </div>
+  <script type="text/javascript" src="/static/js/index.js" ></script>
+</body>
+</html>

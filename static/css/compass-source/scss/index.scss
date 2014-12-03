@@ -1,0 +1,465 @@
+
+
+@import "compass/css3/border-radius";
+@import "compass/css3/user-interface";
+
+// variables
+$header-background-color: #ccc;
+$header-bottom-border-color: #999;
+$header-bottom-border-size: 3px;
+
+$card-width: 400px;
+$card-height: 120px;
+$header-button-border-size: 1px;
+$header-button-border-color: white;
+$header-button-border-radius: 3px;
+$header-button-background-color: white;
+$header-button-font-family: montserrat, sans-serif;
+$header-button-font-size: 20px;
+
+$card-border-size: 3px;
+$card-border-color: #999;
+$card-background-color: #eee;
+$card-inner-border-size: 1px;
+$card-inner-border-color: #999;
+
+$box-border-size: 2px;
+$box-border-color: #00CC00;
+$box-background-color: #eee;
+$login-box-border-size: 1px; 
+$login-box-border-color: #00CC00;
+$register-box-border-size: 4px; 
+$register-box-border-color: #00CC00;
+
+$register-form-border-size: 6px; 
+$register-form-border-color: #aaa;
+$register-form-border-radius: 12px;
+$register-form-background-color: #eee;
+
+$task-card-color-DO_OR_DIE : red;
+$task-card-color-IMPORTANT : orange;
+$task-card-color-BETTER_DONE : yellow;
+$task-card-color-MEH : green;
+
+// classes
+
+body {
+    font-family: montserrat, sans-serif;
+    //font-family: swanky-and-moo-moo, sans-serif;
+    font-size: 28px;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(/static/img/background-image.png)
+}
+div {
+    padding: 0px;
+    margin: 0px;
+}
+td {
+    padding: 0px;
+    margin: 0px;
+}
+table {
+    border-collapse: collapse;
+}
+.visuallyhidden{
+    display: none;
+}
+
+// base classes
+
+.box {
+    height: 46px;
+    line-height: 46px;
+    width: 200px;
+    border: solid $box-border-size $box-border-color;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    @include border-radius(6px);
+    font-family: montserrat, sans-serif;
+}
+.card {
+    user-select: none;
+    height: $card-height;
+    width: $card-width;
+    font-size: 20px;
+    border: solid $card-border-size $card-border-color;
+    background-color: $card-background-color;
+    cursor: pointer;
+    text-align: center;
+    @include border-radius(6px);
+}
+.task-card{
+    @extend .card;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+
+    table {
+        height: 100%;
+        width: 100%;
+    }
+    td {
+        //border: solid 1px black;
+    }
+    .due{
+        font-size: 12px;
+        font-family: montserrat, sans-serif;
+
+        div{
+            width: 100%;
+            font-size: 22px;
+            line-height: 22px;
+            height: 20px;        
+        }
+    }
+    .relevance{
+        width: 60px;
+        background-color: white;
+        border-top: solid $card-inner-border-size $card-inner-border-color;
+    }
+    .DO_OR_DIE{background-color: $task-card-color-DO_OR_DIE;}
+    .IMPORTANT{background-color: $task-card-color-IMPORTANT;}
+    .BETTER_DONE{background-color: $task-card-color-BETTER_DONE;}
+    .MEH{background-color: $task-card-color-MEH;}
+    .done{
+        background: url(/static/img/done-background.png) repeat #D3E6C8;
+    }
+    .text{
+        font-size: 18px;
+        border-left: solid $card-inner-border-size $card-inner-border-color;
+        font-family: swanky-and-moo-moo, sans-serif;
+        font-weight: normal;
+    }
+}
+.task-card-edit{
+    height:auto;
+    width: $card-width;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    margin-left: -203px;
+    cursor: default;
+    z-index:10000;
+
+
+
+    .main{
+        @extend .task-card;
+        cursor: default;
+        margin-top: 10px;
+
+        textarea{
+            width: 90%;
+            height: 98%;
+        }
+        .due-up{
+            cursor: pointer;
+            @include user-select(none);
+        }
+        .due-down{
+            @extend .due-up;
+        }
+        .relevance{
+            cursor: pointer;
+        }
+        .button{
+            width: 80px;
+        }
+
+    }
+    .cancel{
+        margin-left: 326px;
+        margin-top: 0px;
+    }
+    
+    .save{
+        margin-left: 326px;
+        margin-top: 10px;
+    }
+    
+    .relevance-selector{
+        position: absolute;
+        margin-top: -40px;
+    }
+
+    .relevance-selector1{
+        @extend .task-card;
+        @include border-radius(6px);
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        margin-top: 20px;
+        background-color: $task-card-color-DO_OR_DIE;
+
+        .selector{
+            margin-left: -310px;
+            margin-top: 20%;
+            font-size: 24px;
+            width: 300px;
+            font-family: swanky-and-moo-moo, sans-serif;
+            font-weight: normal;
+            text-align: right;
+            background-color: transparent;
+        }
+    }
+
+    .relevance-selector2{
+        @extend .relevance-selector1;
+        margin-top: 100px;
+        background-color: $task-card-color-IMPORTANT;
+
+    }
+    
+    .relevance-selector3{
+        @extend .relevance-selector1;
+        margin-top: 180px;
+        background-color: $task-card-color-BETTER_DONE;
+    }
+
+    .relevance-selector4{
+        @extend .relevance-selector1;
+        margin-top: 260px;
+        background-color: $task-card-color-MEH;
+    }
+
+  
+}
+// classes tree
+
+.head-bar{
+
+    .header{
+        height: 60px;
+        width: 100%;
+        background-color: $header-background-color;
+        border-bottom: solid $header-bottom-border-size $header-bottom-border-color;
+        position: relative;
+
+        .status-box {
+            height: 42px;
+            width: 286px;
+            margin-left: 6px;
+            margin-top: 6px;
+            position: absolute;
+            left: 0px;
+            border: solid 3px white;
+            @include border-radius($header-button-border-radius);
+            font-family: $header-button-font-family;
+            font-size: $header-button-font-size;
+            text-align: center;
+            line-height: 42px;
+            cursor: pointer;
+
+            .title{
+                background-color: $header-button-background-color;
+                text-align: center;
+                height: 42px;
+                line-height: 42px;
+                width: 100px;
+                float:left;
+
+            }
+            .status-area{
+                float:left;
+
+
+
+                .DO_OR_DIE{
+                    @include border-radius($header-button-border-radius);
+                    height: 30px;
+                    width: 30px;
+                    text-align: center;
+                    line-height: 28px;
+                    float:left;
+                    margin-left: 6px;
+                    margin-top: 6px;
+
+                    background-color: red;
+                    } 
+                .IMPORTANT{
+                    @extend .DO_OR_DIE;
+                    background-color: orange;
+                } 
+                .BETTER_DONE{
+                    @extend .DO_OR_DIE;
+                    background-color: yellow;
+                } 
+                .MEH{
+                    @extend .DO_OR_DIE;
+                    background-color: green;
+                    } 
+                .done{
+                    @extend .DO_OR_DIE;
+                    background: url(/static/img/done-background.png) repeat #D3E6C8;
+                }
+            }
+
+        }
+        .newcard-box {
+            height: 46px;
+            width: 160px;
+            margin-top: 6px;
+            position: absolute;
+            left: 50%;
+            margin-left:-100px;
+            border: solid $header-button-border-size $header-button-border-color;
+            background-color: $header-button-background-color;
+            @include border-radius($header-button-border-radius);
+            font-family: $header-button-font-family;
+            font-size: $header-button-font-size;
+            text-align: center;
+            line-height: 44px;
+            cursor: pointer;
+
+
+        }
+        .login-box {
+            @extend .box;
+            margin-top: 6px;
+            margin-right: 6px;
+            position: absolute;
+            border: solid $login-box-border-size $login-box-border-color;
+            right: 0px;
+        }
+        .loggedin-box {
+            @extend .box;
+            margin-top: 6px;
+            margin-right: 6px;
+            position: absolute;
+            border: solid $login-box-border-size white;
+            right: 0px;
+        }
+    }
+    .header.mode-loading{
+
+        .overlay{
+                position:absolute;
+                position: fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color:rgba(0, 0, 0, 0.60);
+                z-index:9999;
+                color:white;
+            }
+    }
+
+    .storage{
+        display: none;
+    }
+}
+.body-bar{
+    .canvas{
+        overflow-x: hidden;
+
+        .intro{
+            margin: 0 auto;
+            position: relative;
+            width: 610px;
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+            font-family: swanky-and-moo-moo, sans-serif;
+
+            .ticker{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .task-card--presentation{
+                    @extend .task-card;
+                    margin-left: auto;
+                    margin-right: auto;
+                    position: relative;
+                }
+                .register-form{
+                    border: solid $register-form-border-size $register-form-border-color;
+                    background-color: $register-form-background-color;
+                    @include border-radius($register-form-border-radius);
+                    width: 310px;
+                    height: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-family: montserrat, sans-serif;
+                    font-size: 14px;
+                    .formname{
+                        width: 130px;
+                        text-align: right;
+                        float: left;
+                    }
+                }
+                .login-form{
+                    @extend .register-form;
+                }
+            }
+            .register-box{
+                @extend .box;
+                width: 300px;
+                height: 80px;
+                line-height: 78px;
+                vertical-align: middle;
+                font-size: 60px;
+                margin: 0 auto;
+                border: solid $register-box-border-size $register-box-border-color;
+
+            }
+        }
+        .sort-dropdown{
+            //border:solid 2px red;
+            position: absolute;
+            top: 70px;
+            left: 15px;
+
+            .title{
+                display: inline;
+            }
+            .content{
+                display: inline;
+            }
+        }
+    }
+    .canvas.mode-loading{
+
+        .overlay{
+                position:absolute;
+                position: fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color:rgba(0, 0, 0, 0.60);
+                z-index:9999;
+                color:white;
+            }
+    }
+    .canvas.mode-edit{
+            .overlay{
+                position:absolute;
+                position: fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color:rgba(255, 255, 255, 0.90);
+                z-index:9999;
+                color:white;
+            }
+    }
+
+    .storage{
+        display: none;
+    }
+}
+.foot-bar{
+    .footer{
+        margin-bottom: 150px;
+
+    }
+    .storage{
+        display: none;
+    }
+}
+
